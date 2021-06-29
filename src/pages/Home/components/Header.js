@@ -1,19 +1,31 @@
 import React from 'react'
+import {Button} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 
-function Reader(){
+const userStyle =  makeStyles({
+ AppBar:{
+     boxShadow:"none"
+ }
+});
+function Header(){
+    const classes = userStyle();
     return(
-        <header className="header">
-        <div className="toolbar">
-        <div>
+        <AppBar position="fixed" color="inherit" className={classes.AppBar}>
+        <Toolbar>
+        {/* <div>
             <span>Conecta Dev</span>
         </div>
         <div>
-            <button>Novo Post</button>
+            <Button variant="contained" color="primary">
+            Novo Post
+         </Button>
             <span>mg1</span>
             <span>mg2</span>
-        </div>
-        </div>
-    </header>
+        </div> */}
+        </Toolbar>
+    </AppBar>
     );
 }
-export default Reader;
+export default Header;
