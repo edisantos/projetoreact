@@ -26,7 +26,7 @@ const post =[
         date: '01/06/2021',
         description:'Que curso legar. Muito top',
         hashtags:'#dotnet,#javascripts,#react.js',
-        image:'/img/Post/post.png'
+        image:'/img/Posts/post2.png'
     },
     {
         id:2,
@@ -40,7 +40,7 @@ const post =[
         date: '01/06/2021',
         description:'Que curso legar. Muito top',
         hashtags:'#dotnet,#javascripts,#react.js',
-        image:'/img/Post/post.png'
+        image:'/img/Posts/post.png'
     }
 ];
 function Feeds(){
