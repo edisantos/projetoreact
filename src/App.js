@@ -6,6 +6,8 @@ import SingIn from './pages/SingIn';
 import Home from './pages/Home';
 import theme from './theme'
 
+import './mock';
+
 const useStyle = makeStyles({
   h1:{
       fontSize: 60,
