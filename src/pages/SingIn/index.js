@@ -184,19 +184,19 @@ function SingIn(){
                   <Button fullWidth variant="contained" color="primary" className={classes.button} onClick={(handlesSingIn)}>
                     Entrar
                   </Button>
-                  
-                  <Grid item>
-                      <Link> Esqueceu sua senha?</Link>
-                  </Grid>
-                  <Grid item>
-                  <Link>Não tem uma conta? Registre-se</Link>
-                  </Grid>
                   {
                      errorMessage &&
                       <FormHelperText error> 
                           { errorMessage }
                       </FormHelperText>
                   }
+                  <Grid item>
+                      <Link> Esqueceu sua senha?</Link>
+                  </Grid>
+                  <Grid item>
+                  <Link>Não tem uma conta? Registre-se</Link>
+                  </Grid>
+                  
                </form>
             </Box>
            </Grid>
