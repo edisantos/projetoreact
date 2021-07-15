@@ -13,7 +13,8 @@ mock.onPost('/api/home/login').reply((config)=>{
         id:1,
         name: 'Edinaldo Santos',
         username: 'edylemos',
-        email: 'edylemos@gmail.com'
+        email: 'edylemos@gmail.com',
+        avatar: '/img/Avatar/avatar1.png'
     }
      return [200,{ user }]
 

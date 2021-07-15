@@ -7,6 +7,8 @@ import { SvgIcon } from '@material-ui/core';
 import {Bell} from 'react-feather';
 import Avatar from '@material-ui/core/Avatar';
 
+import authService from '../../../services/authService';
+
 const userStyle =  makeStyles({
  AppBar:{
      boxShadow:"none",
@@ -32,6 +34,7 @@ const userStyle =  makeStyles({
 });
 function Header(){
     const classes = userStyle();
+    const user = authService.getUser();
     return(
         <AppBar position="fixed" color="inherit" className={classes.AppBar}>
         <Toolbar>
@@ -44,7 +47,8 @@ function Header(){
                 <SvgIcon>
                     <Bell></Bell>
                 </SvgIcon>
-               <Avatar src="/broken-image.jpg" className={classes.avatar} />
+               {/* <Avatar src="/broken-image.jpg" className={classes.avatar} /> */}
+               <Avatar alt="avatar" src={user && user.avatar} />
             </div>
         </Toolbar>
     </AppBar>

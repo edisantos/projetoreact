@@ -1,4 +1,3 @@
-import { reject } from 'q'
 import axios from '../utils/axios'
 
 class AuthService{
@@ -6,7 +5,7 @@ class AuthService{
 
    // Pesquisar o que é uma Promise JavaScript
     SignIn = (email, password) => {
-        return new Promise((resolve, rejetc)=>{
+        return new Promise((resolve, reject)=>{
             axios.post('/api/home/login', {email,password})
             .then(response =>{
                 if(response.data.user){
@@ -29,6 +28,9 @@ class AuthService{
 
     getUser = () => {
         const user = localStorage.getItem("user");
+        if(user){
+            return JSON.parse(user);
+        }
         return user;
     }
 
